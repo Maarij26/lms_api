@@ -139,3 +139,5 @@ C:\Users\Acer\Desktop\LMS_API\LibraryManagementSystemAPI\LibraryManagementSystem
 C:\Users\Acer\Desktop\LMS_API\LibraryManagementSystemAPI\LibraryManagementSystemAPI\obj\Debug\net8.0\LibraryManagementSystemAPI.pdb
 C:\Users\Acer\Desktop\LMS_API\LibraryManagementSystemAPI\LibraryManagementSystemAPI\obj\Debug\net8.0\LibraryManagementSystemAPI.genruntimeconfig.cache
 C:\Users\Acer\Desktop\LMS_API\LibraryManagementSystemAPI\LibraryManagementSystemAPI\obj\Debug\net8.0\ref\LibraryManagementSystemAPI.dll
+C:\Users\Acer\Desktop\LMS_API\LibraryManagementSystemAPI\LibraryManagementSystemAPI\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Acer\Desktop\LMS_API\LibraryManagementSystemAPI\LibraryManagementSystemAPI\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

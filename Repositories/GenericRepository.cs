@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using LibraryManagementSystemAPI.Data;
+﻿using LibraryManagementSystemAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -21,35 +19,39 @@ namespace LibraryManagementSystemAPI.Repositories
             _context = context;
             _dbSet = context.Set<T>();
         }
-
-        public async Task<T> GetByIdAsync(int id)
+        //Find one record by primary key (Id)
+        public async Task<T?> GetByIdAsync (int id)
         {
             return await _dbSet.FindAsync(id);
         }
-
+        //Get all records from the table
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }
 
+        //Add new record - only marks it as Added in memory
         public async Task AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
         }
-
-        public void Update(T entity)
+        //Mark entity as modified in memory
+        public void Update (T entity)
         {
             _dbSet.Update(entity);
         }
+        //Mark entity as deleted in memory
 
         public void Delete(T entity)
         {
             _dbSet.Remove(entity);
         }
 
+        //To send all pending changes to sql server
+
         public async Task<bool> SaveChangesAsync()
         {
-            return (await _context.SaveChangesAsync()) > 0;
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }
