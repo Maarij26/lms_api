@@ -12,7 +12,12 @@ namespace LibraryManagementSystemAPI.Repositories
         public BookRepository(AppDbContext context) : base(context)
         {
         }
-
+        public new async Task<IEnumerable<Book>> GetAllAsync()
+        {
+            return await _context.Books
+                .Include(b => b.Author)
+                .ToListAsync();
+        }
         //Fetch book and its author in one SQL query using Include (Join).
         public async Task<Book?> GetBookWithAuthorAsync(int id)
         {
